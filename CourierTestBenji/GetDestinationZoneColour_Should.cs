@@ -29,7 +29,7 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Ward"); //town name
+            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Riwaka"); //town name
 
             //Assert
             Assert.AreEqual("Blue", lcTicketColour); //ticket colour
@@ -42,7 +42,7 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Murchison"); //town name
+            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Nelson Lakes National Park"); //town name
 
             //Assert
             Assert.AreEqual("Lime", lcTicketColour); //ticket colour
@@ -55,32 +55,11 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Reefton"); //town name
+            string lcTicketColour = lcQuoteFromNelson.GetDestinationZone("Kaikoura"); //town name
 
             //Assert
             Assert.AreEqual("Orange", lcTicketColour); //ticket colour
         }
-
-             
-
-        //-----------------------------
-
-
-
-        [TestMethod]
-
-        public void OtherTest()
-        {
-            ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
-            string[] lcPinkTowns = new string[] { "Nelson", "Picton", "Hope" };
-
-            foreach (string lcTowns in lcPinkTowns)
-            {
-                string lcTicketColour = lcQuoteFromNelson.GetDestinationZone(lcTowns); //town name
-                Assert.AreEqual("Pink", lcTicketColour); //Ticket colour                             
-            }            
-        }
-                
-
+           
     }
 }

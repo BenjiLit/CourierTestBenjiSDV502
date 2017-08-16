@@ -16,7 +16,7 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(12, "Pink"); //weight, destination zone
+            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(0.001m, "Pink"); //weight, destination zone
 
             //Assert
             Assert.AreEqual(0, lcQuoteResult.ExcessTickets); //excess tickets
@@ -30,7 +30,7 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(12, "Blue"); //weight, destination zone
+            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(0.001m, "Blue"); //weight, destination zone
 
             //Assert
             Assert.AreEqual(0, lcQuoteResult.ExcessTickets); //excess tickets
@@ -44,7 +44,7 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(12, "Lime"); //weight, destination zone
+            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(0.001m, "Lime"); //weight, destination zone
 
             //Assert
             Assert.AreEqual(0, lcQuoteResult.ExcessTickets); //excess tickets
@@ -58,15 +58,13 @@ namespace CourierTestBenji
             ParcelQuoteFromNelson lcQuoteFromNelson = new ParcelQuoteFromNelson();
 
             //Act
-            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(12, "Orange"); //weight, destination zone
+            ParcelQuoteResult lcQuoteResult = lcQuoteFromNelson.CalculateQuote(0.001m, "Orange"); //weight, destination zone
 
             //Assert
             Assert.AreEqual(0, lcQuoteResult.ExcessTickets); //excess tickets
             Assert.AreEqual(12.95m, lcQuoteResult.Price); //total price
         }
-
-
-
+        
 
     }
 }
